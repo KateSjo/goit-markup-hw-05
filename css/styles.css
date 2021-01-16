@@ -420,7 +420,8 @@ a {
   text-decoration: none;
 }
 
-.site-nav a:hover::before {
+.site-nav a:hover::before,
+.site-nav .link.current::after {
   content: "";
   position: absolute;
   display: block;
@@ -431,6 +432,10 @@ a {
 
   background: var(--accent-color);
   border-radius: 2px;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Логотип*/
@@ -460,11 +465,11 @@ a {
   fill: currentColor;
 }
 
-a {
+/*a {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+}*/
 
 .main-nav {
   display: flex;
@@ -566,12 +571,6 @@ a {
   margin-bottom: 50px;
 }
 
-.button-primary {
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .table .first-but {
   color: #f5f4fa;
 }
@@ -605,6 +604,12 @@ a {
   background: var(--accent-color);
 }
 
+button {
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* Картинки с описанием*/
 
 .description.list {
@@ -635,7 +640,7 @@ a {
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
 
-  transition-property: color background-color;
+  transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -876,7 +881,7 @@ p {
   margin: 0;
   background: rgba(255, 255, 255, 0.1);
 
-  transition-property: background-color;
+  transition-property: fill, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
