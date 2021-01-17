@@ -365,7 +365,7 @@ body {
   height: 44px;
   border-radius: 50%;
 
-  transition-property: background-color;
+  transition-property: fill, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -420,8 +420,7 @@ a {
   text-decoration: none;
 }
 
-.site-nav a:hover::before,
-.site-nav .link.current::after {
+.current::after {
   content: "";
   position: absolute;
   display: block;
@@ -432,10 +431,6 @@ a {
 
   background: var(--accent-color);
   border-radius: 2px;
-
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Логотип*/
@@ -465,12 +460,6 @@ a {
   fill: currentColor;
 }
 
-/*a {
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}*/
-
 .main-nav {
   display: flex;
   align-items: center;
@@ -492,10 +481,6 @@ a {
   padding-bottom: 32px;
   display: block;
   color: var(--primary-text-color);
-
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-auth {
@@ -610,6 +595,9 @@ a {
 .hero .primary:hover {
   color: var(--primary-white-color);
   background: var(--accent-color);
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 button {
