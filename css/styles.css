@@ -492,6 +492,10 @@ a {
   padding-bottom: 32px;
   display: block;
   color: var(--primary-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-auth {
@@ -509,6 +513,10 @@ a {
   color: var(--secondary-text-color);
   display: flex;
   align-items: center;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list {
@@ -649,7 +657,8 @@ button {
   background: rgba(33, 150, 243, 0.9);
 }
 
-.section-photo:hover .submenu {
+a:hover .submenu,
+a:focus .submenu {
   transform: translateY(-100%);
 }
 
@@ -737,7 +746,9 @@ img {
 .client-logo {
   width: 170px;
   height: 90px;
+}
 
+.clients-icon a {
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
